@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather data</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title">Weather in cities I've visited, Feb & July 2020</h2>
+    <form class="month-picker">
+      Showing data for
+      <select id="mySelect" onchange="renderCharts()">
+        <option value="February">February</option>
+        <option value="July">July</option>
+      </select>
+    </form>
+    <div id="timechart"></div>
+    <div id="timechart-legend">
+      <div class="circle lime-green"></div>
+      <div>Oklahoma City</div>
+      <div class="circle magenta"></div>
+      <div>Eugene</div>
+      <div class="circle indigo"></div>
+      <div>Seattle</div>
+      <div class="circle orange"></div>
+      <div>Huntington Beach</div>
+    </div>
+    <hr />
+    <div id="weather">
+      <ul class="piecharts">
+        <li>
+          <svg id="eugene"></svg>
+          <div class="label">Eugene</div>
+        </li>
+        <li>
+          <svg id="seattle"></svg>
+          <div class="label">Seattle</div>
+        </li>
+        <li>
+          <svg id="hb"></svg>
+          <div class="label">Huntington Beach</div>
+        </li>
+        <li>
+          <svg id="okc"></svg>
+          <div class="label">Oklahoma City</div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="data/eugene_february.js"></script>
+    <script src="data/seattle_february.js"></script>
+    <script src="data/huntington_beach_february.js"></script>
+    <script src="data/oklahoma_city_february.js"></script>
+    <script src="data/eugene_july.js"></script>
+    <script src="data/seattle_july.js"></script>
+    <script src="data/huntington_beach_july.js"></script>
+    <script src="data/oklahoma_city_july.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

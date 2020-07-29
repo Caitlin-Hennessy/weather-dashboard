@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.piecharts {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 970px;
+}
+
+.piecharts svg {
+  width: 200px;
+  height: 200px;
+  /* next 2 lines center the svg in the li */
+  display: block;
+  margin: auto;
+}
+.piecharts li {
+  flex-basis: 25%;
+}
+
+.label {
+  text-align: center;
+}
+
+/* breakpoint should be just before flexbox would try to wrap to 3 & 1 */
+@media (max-width: 860px) {
+  .piecharts li {
+    flex-basis: 50%;
+  }
+  .piecharts {
+    width: 600px;
+  }
+}
+
+.magenta {
+  background-color: magenta;
+}
+
+.indigo {
+  background-color: #6229ff;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.lime-green {
+  background-color: #6ecf32;
+}
+
+.magenta-text {
+  color: magenta;
+}
+
+.indigo-text {
+  color: #6229ff;
+}
+
+.orange-text {
+  color: orange;
+}
+
+.lime-green-text {
+  color: #6ecf32;
+}
+
+.tooltip {
+  background-color: white;
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid black;
+}
+
+.title,
+.month-picker {
+  text-align: center;
+}
+
+#timechart-legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 960px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+hr {
+  width: 970px;
+  height: 1px;
+  background-color: black;
+  border: 0;
+  margin-bottom: 50px;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+#timechart-legend div:not(.circle) {
+  margin-right: 10px;
+}
+
+#timechart-legend div.circle {
+  margin-right: 2px;
+}
